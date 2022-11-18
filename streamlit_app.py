@@ -49,7 +49,7 @@ fruityvice_normalised = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalised)
 
 #Don't run this section of the code while troubleshooting
-streamlit.stop()
+#streamlit.stop()
 
 
 #Connection to Snowflake and required statements to return data from a database
