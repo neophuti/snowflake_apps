@@ -82,7 +82,7 @@ if streamlit.button('Get Fruit Load List'):
 #streamlit.stop()
 
 def insert_row_snowflake(new_fruit):
-     my_sql_insert = "INSERT INTO FRUIT_LOAD_LIST VALUES ('from streamlit')"
+     my_sql_insert = "INSERT INTO FRUIT_LOAD_LIST VALUES ('" + new_fruit + "')"
      my_cur.execute(my_sql_insert)
      return "Thanks for adding " + new_fruit
    
