@@ -57,9 +57,9 @@ my_cur.execute(my_sql)
 
 my_data_row = my_cur.fetchone()
 
-streamlit.text("Hello from Snowflake:")
+streamlit.header("The fruit load list contains:")
 
-streamlit.text(my_data_row)
+streamlit.dataframe(my_data_row)
 
 
 
