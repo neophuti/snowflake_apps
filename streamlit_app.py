@@ -83,9 +83,10 @@ if streamlit.button('Get Fruit List'):
 #streamlit.stop()
 
 def insert_row_snowflake(new_fruit):
-     my_sql_insert = "INSERT INTO FRUIT_LOAD_LIST VALUES ('" + new_fruit + "')"
-     my_cur.execute(my_sql_insert)
-     return "Thanks for adding " + new_fruit
+   with my_cnx.cursor() as my_cur:
+       my_sql_insert = "INSERT INTO FRUIT_LOAD_LIST VALUES ('" + new_fruit + "')"
+       my_cur.execute(my_sql_insert)
+       return "Thanks for adding " + new_fruit
    
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
